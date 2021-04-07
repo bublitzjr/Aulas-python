@@ -1,71 +1,215 @@
-symbol = "!@#$%^&*()_-+={}[]"
+import string
+
+acentos = "óá"
+exceptions = "_ "
+sequenceNumbers = "0123456789"
+sequenceAlphabet = string.ascii_lowercase
+controller = False
 
 def numberOfCharacters(password):
     bonus = len(password)*4
     return bonus
 
-def lettersOnly(password):
-    return len(password)*-1
-
 def upperCaseLetters(password):
     charsUpper = 0
-    for i in password:
-        if i.isupper():
-            charsUpper = charsUpper + 1
-    return (len(password)-charsUpper)*2
+    if not password.isupper():
+        for i in password:
+            if i.isupper():
+                charsUpper += 1
+
+        if charsUpper != 0:
+            charsUpper = (len(password) - charsUpper) * 2
+    return charsUpper
 
 def lowerCaseLetters(password):
     charsLower = 0
-    for i in password:
-        if i.islower():
-            charsLower = charsLower + 1
-    return (len(password)-charsLower)*2
+    if password.islower():
+        for i in password:
+            if i.islower() and i not in acentos:
+                charsLower += 1
+
+        if charsLower != 0:
+            charsLower = (len(password) - charsLower) * 2
+    return charsLower
 
 def numbers(password):
     charsNumber = 0
-    for i in password:
-        if i.isdigit():
-            charsNumber = charsNumber + 1
-    return (charsNumber*4)
+    if not password.isdigit():
+        for i in password:
+            if i.isdigit():
+                charsNumber += 1
+    return charsNumber * 4
 
 def symbols(password):
     charsSymbol = 0
     for i in password:
-        if i in symbol:
-            charsSymbol = charsSymbol + 1
-    return (charsSymbol*6)
+        if i.lower() not in sequenceAlphabet and i not in exceptions and i not in sequenceNumbers:
+            charsSymbol += 1
+    return (charsSymbol * 6)
 
 def middleNumberOrSymbol(password):
     CharsMiddle = 0
-    for i in range(1, len(password), 1):
-        if (password[i].isdigit() or password[i] in symbol) and not password[i].index() == len(password):
-            CharsMiddle = CharsMiddle + 1
+    for i in range(1, len(password)):
+        if (password[i].isdigit() or (password[i].lower() not in sequenceAlphabet and password[i] not in exceptions)) and i != len(password)-1:
+            CharsMiddle += 1
     return (CharsMiddle*2)
 
+def requirements(password):
+    requirementsCount = 0
+
+    if len(password) >= 8:
+        requirementsCount += 1
+
+        if upperCaseLetters(password) > 0:
+            requirementsCount += 1
+
+        if lowerCaseLetters(password) > 0:
+            requirementsCount += 1
+
+        if numbers(password) > 0:
+            requirementsCount += 1
+
+        if symbols(password) > 0:
+            requirementsCount += 1
+
+        if requirementsCount == 4:
+            requirementsCount = (requirementsCount*2)
+        else:
+            requirementsCount = 0
+
+    return requirementsCount
+
+def lettersOnly(password):
+    countDigit = 0
+
+    for i in password:
+        if i.isdigit():
+            countDigit += 1
+
+    if countDigit == 0:
+        countDigit = (len(password)*-1)
+    else:
+        countDigit = 0
+
+    return countDigit
+
+def numbersOnly(password):
+    countLetters = 0
+
+    for i in password:
+        if i.isalpha():
+            countLetters += 1
+
+    if countLetters == 0:
+        return (len(password)*-1)
+    else:
+        countLetters = 0
+
+    return countLetters
+
 def consecutiveLowerCase(password):
-    qnt = 0
-    for i in range(1, len(password), 2):
-        if password[i].islower() and password[i+1].islower():
-            qnt = qnt + 2
-        return (qnt*2)*-1
+    countLowerCase = 0
+    password = password + "1"
+
+    for i in range(len(password)):
+        if password[i].islower() and password[i+1].islower() and password[i+1] not in acentos and password[i] not in acentos:
+            countLowerCase += 1
+
+    return (countLowerCase*2)*-1
+
+def consecutiveUpperCase(password):
+    countUpperCase = 0
+    password = password + "1"
+
+    for i in range(len(password)):
+        if password[i].isupper() and password[i+1].isupper():
+            countUpperCase += 1
+
+    return (countUpperCase*2)*-1
+
+def consecutiveNumbers(password):
+    countNumbers = 0
+    password = password + "a"
+
+    for i in range(len(password)):
+        if password[i].isdigit() and password[i+1].isdigit():
+            countNumbers += 1
+
+    return (countNumbers*2)*-1
+
+def sequentialNumbers(password):
+    numbers = ""
+    countNumbers = 0
+
+    for i in range(len(password)):
+        numbers += password[i : i + 3]
+
+        if numbers in sequenceNumbers and len(numbers) == 3:
+            countNumbers += 1
+
+        numbers = ""
+
+    return (countNumbers * 3) * -1
+
+def sequentialLetters(password):
+    letters = ""
+    countLetters = 0
+
+    for i in range(len(password)):
+        letters += password[i: i + 3]
+
+        if letters in sequenceAlphabet and len(letters) == 3:
+            countLetters += 1
+
+        letters = ""
+
+    return (countLetters * 3) * -1
 
 password = input("Digite sua senha: \n")
-bonus  = numberOfCharacters(password)
-print(numberOfCharacters(password), "% Numeros")
+
+bonus = numberOfCharacters(password)
+print(numberOfCharacters(password), "% Number of Characters")
+
 bonus += upperCaseLetters(password)
-print(upperCaseLetters(password), "% Upper case")
+print(upperCaseLetters(password), "% Uppercase Letters")
+
 bonus += lowerCaseLetters(password)
-print(lowerCaseLetters(password), "% lower case")
+print(lowerCaseLetters(password), "% Lowercase Letters")
+
 bonus += numbers(password)
-print(numbers(password), "% numeros")
+print(numbers(password), "% Numbers")
+
 bonus += symbols(password)
-print(symbols(password), "% simbolos")
+print(symbols(password), "% Symbols")
+
 bonus += middleNumberOrSymbol(password)
-print(middleNumberOrSymbol(password), "% middle")
+print(middleNumberOrSymbol(password), "% Middle Numbers or Symbols")
 
+bonus += requirements(password)
+print(requirements(password), "% Requirements")
 
-#bonus += consecutiveLowerCase(password)
-#bonus += lettersOnly(password)
+print("============Deductions=============")
+
+bonus += lettersOnly(password)
+print(lettersOnly(password), "% Letters Only")
+
+bonus += numbersOnly(password)
+print(numbersOnly(password), "% Numbers Only")
+
+bonus += consecutiveUpperCase(password)
+print(consecutiveUpperCase(password), "% Consecutive Uppercase Letters")
+
+bonus += consecutiveLowerCase(password)
+print(consecutiveLowerCase(password), "% Consecutive Lowercase Letters  ")
+
+bonus += consecutiveNumbers(password)
+print(consecutiveNumbers(password), "% Consecutive Numbers")
+
+bonus += sequentialLetters(password)
+print(sequentialLetters(password), "% Sequential Letters ")
+
+bonus += sequentialNumbers(password)
+print(sequentialNumbers(password), "% Sequential Numbers")
 
 
 
