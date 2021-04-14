@@ -27,19 +27,12 @@ class Jogo:
 
     def verificar_quem_ganhou(self, cartas_e_jogadores: dict):
 
-        pedra_tesoura_ganhador = self.verificar_carta_ganhadora(cartas_e_jogadores, "pedra", "tesoura")
-        if pedra_tesoura_ganhador[0]:
-            return pedra_tesoura_ganhador
+        for ganhadora, perdedora in [("pedra", "tesoura"), ("papel", "pedra"), ("tesoura", "papel")] :
+            ganhador = self.verificar_carta_ganhadora(cartas_e_jogadores, ganhadora, perdedora)
+            if ganhador[0]:
+                return ganhador
 
-        papel_pedra = self.verificar_carta_ganhadora(cartas_e_jogadores, "papel", "pedra")
-        if papel_pedra[0]:
-            return papel_pedra
-
-        tesoura_papel = self.verificar_carta_ganhadora(cartas_e_jogadores, "tesoura", "papel")
-        if tesoura_papel[0]:
-            return tesoura_papel
-
-        return (False,)
+            return (False,)
 
     def verificar_carta_ganhadora(self, cartas_e_jogadores, carta_ganha, carta_perde):
 
@@ -117,3 +110,8 @@ executar_jogo()
 # lista = ["A", "B", "C"]
 # for numero, valor in enumerate(lista):
 #     print(f"{numero} - {valor}")
+
+
+def is_class_empty():
+    pass
+
