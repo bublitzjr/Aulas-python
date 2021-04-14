@@ -18,15 +18,18 @@ class Jogadores:
              self.cartas.append(carta)
         return self.cartas
 
-    def traduzir_cartas(self) -> list: # Traduz a cartas pro front
-        cartasTraduzidas = []
-        for i in self.cartas:
-            if i == 1:
-                cartasTraduzidas.append("Pedra")
-            elif i == 2:
-                cartasTraduzidas.append("Papel")
+    def traduzir_cartas(self, cartas) -> list: # Traduz a cartas
+        cartasTraduzidas = ""
+        for i in cartas:
+            if i == 1 or i == "1":
+                # cartasTraduzidas.append("Pedra")
+                cartasTraduzidas += "Pedra "
+            elif i == 2 or i == "2":
+                # cartasTraduzidas.append("Papel")
+                cartasTraduzidas += "Papel "
             else:
-               cartasTraduzidas.append("Tesoura")
+               # cartasTraduzidas.append("Tesoura")
+               cartasTraduzidas += "Tesoura "
 
         return cartasTraduzidas
 
