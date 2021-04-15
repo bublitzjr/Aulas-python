@@ -57,7 +57,7 @@ class Farmaceutico():
         with open("ArquivosTXT/medicamentos.txt", "r") as file:
             lines = file.readlines()
 
-        print(f"\n{'':=^50}")
+        print(f"\n{' ESTOQUE ':=^50}")
         print(f"{'Código':<4}\t{' Descrição ':<20}\t{'Quantidade':<4}")
         print(f"{'':-^50}")
         for line in lines:
