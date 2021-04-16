@@ -7,7 +7,6 @@ class Farmaceutico():
                              validade=dados_receita['validade'],
                              quantidade=dados_receita['quantidade'],
                              paciente=dados_receita['paciente'])
-
         result = Farmaceutico().validar_receita(dados_receita)
 
         if result == True:
@@ -60,6 +59,7 @@ class Farmaceutico():
         print(f"\n{' ESTOQUE ':=^50}")
         print(f"{'Código':<4}\t{' Descrição ':<20}\t{'Quantidade':<4}")
         print(f"{'':-^50}")
+
         for line in lines:
             line = line.strip().split(";")
             print(f"{line[0]:<4}\t{line[1]:<20}\t{line[2]:<4}")
@@ -73,13 +73,13 @@ class Farmaceutico():
             line = line.split(";")
             if medicamento == line[1] or medicamento == line[0]:
                 if quantidade < int(line[2]):
-                     self.retirar_estoque(medicamento, quantidade)
+                     self.retirar_estoque(medicamento, quantidade, lines)
                      return True
         return False
 
-    def retirar_estoque(self, medicamento, quantidade):
-        with open("ArquivosTXT/medicamentos.txt", "r") as file:
-            lines = file.readlines()
+    def retirar_estoque(self, medicamento, quantidade, lines):
+        # with open("ArquivosTXT/medicamentos.txt", "r") as file:
+        #     lines = file.readlines()
 
         with open("ArquivosTXT/medicamentos.txt", "w") as file:
             for i in range(len(lines)):
