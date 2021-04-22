@@ -1,4 +1,4 @@
-x, y, z = "Não", "Não", "Não"
+x = y = z = "Não"
 print(x)
 print(y)
 print(z)

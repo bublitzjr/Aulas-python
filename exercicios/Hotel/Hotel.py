@@ -79,17 +79,19 @@ class Hotel:
         self.sql += self.where
         self.cursor.execute(self.sql)
         self.lista_hoteis()
+        print(self.sql)
 
 a = Hotel("blumenau")
 try:
-    a.consultar_por_cidade()
+    # a.consultar_por_cidade()
     # a.filtro_por_academia()
-    a.filtro_por_preco(50, 3000)
-    a.filtro_por_estrelas(3)
+    # a.filtro_por_preco(50, 3000)
+    # a.filtro_por_estrelas(3)
+    a.filtro_por_piscina()
     a.filtrar()
+
 except Exception as e:
     print(e)
-
 
 # a.filtro_vagas()
 
