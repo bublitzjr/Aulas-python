@@ -31,9 +31,9 @@ class Loja:
         if dinheiro >= valor_compra:
             troco = dinheiro - valor_compra
             self.caixa += valor_compra
-            print(f"Valeu! Seu troco é R${troco}")
+            return troco
         else:
-            print("Tente novamente mais tarde!")
+            return "Tente novamente mais tarde!"
 
 # teste = Loja()
 # teste.solicitar_boleto(dict(conta_loja="234", valor=10, data=1010))

@@ -23,3 +23,9 @@ class TestLoja(TestCase):
         result = Loja().solicitar_boleto(dados)
         self.assertDictEqual(result, dados_esperados)
 
+    def test_efetuar_pagamento_com_dinheiro(self):
+        result = Loja().efetuar_pagamento_com_dinheiro(20, 10)
+        self.assertEqual(result, 10)
+
+        result = Loja().efetuar_pagamento_com_dinheiro(20, 30)
+        self.assertEqual(result, "Tente novamente mais tarde!")
