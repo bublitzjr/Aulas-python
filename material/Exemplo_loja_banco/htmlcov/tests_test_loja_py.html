@@ -22,8 +22,8 @@
         </h1>
         <img id="keyboard_icon" src="keybd_closed.png" alt="Show keyboard shortcuts" />
         <h2 class="stats">
-            14 statements &nbsp;
-            <button type="button" class="run shortkey_r button_toggle_run" title="Toggle lines run">14 run</button>
+            17 statements &nbsp;
+            <button type="button" class="run shortkey_r button_toggle_run" title="Toggle lines run">17 run</button>
             <button type="button" class="mis show_mis shortkey_m button_toggle_mis" title="Toggle lines missing">0 missing</button>
             <button type="button" class="exc show_exc shortkey_x button_toggle_exc" title="Toggle lines excluded">0 excluded</button>
         </h2>
@@ -71,14 +71,18 @@
     <p id="t17" class="run"><span class="n"><a href="#t17">17</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">assertEqual</span><span class="op">(</span><span class="nam">result</span><span class="op">,</span> <span class="str">"Compra efetuada com fracasso!"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p id="t18" class="pln"><span class="n"><a href="#t18">18</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p id="t19" class="run"><span class="n"><a href="#t19">19</a></span><span class="t">    <span class="key">def</span> <span class="nam">test_solicitar_boleto</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p id="t20" class="run"><span class="n"><a href="#t20">20</a></span><span class="t">        <span class="key">pass</span>&nbsp;</span><span class="r"></span></p>
-    <p id="t21" class="pln"><span class="n"><a href="#t21">21</a></span><span class="t">        <span class="com"># dados = dict(conta)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t20" class="run"><span class="n"><a href="#t20">20</a></span><span class="t">        <span class="nam">dados</span> <span class="op">=</span> <span class="nam">dict</span><span class="op">(</span><span class="nam">conta_loja</span><span class="op">=</span><span class="str">"234"</span><span class="op">,</span> <span class="nam">valor</span><span class="op">=</span><span class="num">10</span><span class="op">,</span> <span class="nam">data</span><span class="op">=</span><span class="num">1010</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t21" class="run"><span class="n"><a href="#t21">21</a></span><span class="t">        <span class="nam">dados_esperados</span> <span class="op">=</span> <span class="op">{</span><span class="str">'valor'</span><span class="op">:</span> <span class="num">10</span><span class="op">,</span> <span class="str">'data_validade'</span><span class="op">:</span> <span class="num">1013</span><span class="op">,</span> <span class="str">'c&#243;digo'</span><span class="op">:</span> <span class="str">'18012310'</span><span class="op">,</span> <span class="str">'conta_recebedora'</span><span class="op">:</span> <span class="str">'000124578'</span><span class="op">}</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t22" class="pln"><span class="n"><a href="#t22">22</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p id="t23" class="run"><span class="n"><a href="#t23">23</a></span><span class="t">        <span class="nam">result</span> <span class="op">=</span> <span class="nam">Loja</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">solicitar_boleto</span><span class="op">(</span><span class="nam">dados</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t24" class="run"><span class="n"><a href="#t24">24</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">assertDictEqual</span><span class="op">(</span><span class="nam">result</span><span class="op">,</span> <span class="nam">dados_esperados</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t25" class="pln"><span class="n"><a href="#t25">25</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
 </div>
 <div id="footer">
     <div class="content">
         <p>
             <a class="nav" href="index.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav" href="https://coverage.readthedocs.io">coverage.py v5.5</a>,
-            created at 2021-04-22 16:53 -0300
+            created at 2021-04-22 17:12 -0300
         </p>
     </div>
 </div>
