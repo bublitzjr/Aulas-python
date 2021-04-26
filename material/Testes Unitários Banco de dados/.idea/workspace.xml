@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9d29164a-ec42-4feb-ba92-9994a0d8c35d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../17 Testes Unitários/app/bora.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../17 Testes Unitários/app/produtos/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../17 Testes Unitários/tests/test_cadastro/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../17 Testes Unitários/tests/test_produtos/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exemplo_loja_banco/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exemplo_loja_banco/tests/test_banco.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Testes Unitários.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/database.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/htmlcov/app_database_py.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/htmlcov/status.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/htmlcov/tests_test_database_py.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_database.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../codewars.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.coverage" beforeDir="false" afterPath="$PROJECT_DIR$/.coverage" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../15 MongoDB/Exemplo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../15 MongoDB/Exemplo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../17 Testes Unitários/.coverage" beforeDir="false" afterPath="$PROJECT_DIR$/../17 Testes Unitários/.coverage" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../17 Testes Unitários/.idea/17 Testes Unitários.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../17 Testes Unitários/.idea/17 Testes Unitários.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../17 Testes Unitários/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../17 Testes Unitários/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../17 Testes Unitários/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../17 Testes Unitários/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../17 Testes Unitários/funcoes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../17 Testes Unitários/app/cadastro/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../17 Testes Unitários/funcoes/bora.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../17 Testes Unitários/htmlcov/funcoes___init___py.html" beforeDir="false" afterPath="$PROJECT_DIR$/../17 Testes Unitários/htmlcov/funcoes___init___py.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../17 Testes Unitários/htmlcov/funcoes_bora_py.html" beforeDir="false" afterPath="$PROJECT_DIR$/../17 Testes Unitários/htmlcov/funcoes_bora_py.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../17 Testes Unitários/htmlcov/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../17 Testes Unitários/htmlcov/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../17 Testes Unitários/htmlcov/status.json" beforeDir="false" afterPath="$PROJECT_DIR$/../17 Testes Unitários/htmlcov/status.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../17 Testes Unitários/htmlcov/tests___init___py.html" beforeDir="false" afterPath="$PROJECT_DIR$/../17 Testes Unitários/htmlcov/tests___init___py.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../17 Testes Unitários/htmlcov/tests_test_bora_py.html" beforeDir="false" afterPath="$PROJECT_DIR$/../17 Testes Unitários/htmlcov/tests_test_bora_py.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../17 Testes Unitários/tests/test_bora.py" beforeDir="false" afterPath="$PROJECT_DIR$/../17 Testes Unitários/tests/test_bora.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../17 Testes Unitários/~$isas para lembrar.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../17 Testes Unitários/~$isas para lembrar.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exemplo_loja_banco/banco.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Exemplo_loja_banco/funcoes/banco.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exemplo_loja_banco/cartoes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Exemplo_loja_banco/funcoes/cartoes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exemplo_loja_banco/loja.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Exemplo_loja_banco/funcoes/loja.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../htmlcov/17 Testes Unitários___init___py.html" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/app___init___py.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../htmlcov/17 Testes Unitários_funcoes___init___py.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../htmlcov/17 Testes Unitários_funcoes_bora_py.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../htmlcov/17 Testes Unitários_tests___init___py.html" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/tests___init___py.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../htmlcov/17 Testes Unitários_tests_test_bora_py.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../htmlcov/coverage_html.js" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/coverage_html.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../htmlcov/favicon_32.png" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/favicon_32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../htmlcov/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../htmlcov/jquery.ba-throttle-debounce.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/jquery.ba-throttle-debounce.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../htmlcov/jquery.hotkeys.js" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/jquery.hotkeys.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../htmlcov/jquery.isonscreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/jquery.isonscreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../htmlcov/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../htmlcov/jquery.tablesorter.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/jquery.tablesorter.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../htmlcov/keybd_closed.png" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/keybd_closed.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../htmlcov/keybd_open.png" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/keybd_open.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../htmlcov/status.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../htmlcov/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/style.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1rU3z347D9hdRv5ImUqyCH9XIQO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python tests.Unittests for test_database.TestDataBase">
+    <configuration name="database" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Testes Unitários" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/database.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_database.TestDataBase" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Testes Unitários" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_database.TestDataBase&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_database.TestDataBase.test_convert_dict_sql_works" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Testes Unitários" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_database.TestDataBase.test_convert_dict_sql_works&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_database.TestDataBase.test_delete_data_works" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Testes Unitários" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_database.TestDataBase.test_delete_data_works&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_database.TestDataBase.test_select_data_works" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Testes Unitários" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_database.TestDataBase.test_select_data_works&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for tests.test_database.TestBora" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Testes Unitários" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_database.TestBora&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for tests.test_database.TestBora" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Testes Unitários" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_database.TestBora&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Unittests for test_database.TestDataBase" />
+        <item itemvalue="Python tests.Unittests for test_database.TestDataBase.test_convert_dict_sql_works" />
+        <item itemvalue="Python tests.Unittests for test_database.TestDataBase.test_select_data_works" />
+        <item itemvalue="Python.database" />
+        <item itemvalue="Python tests.Unittests for test_database.TestDataBase.test_delete_data_works" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9d29164a-ec42-4feb-ba92-9994a0d8c35d" name="Default Changelist" comment="" />
+      <created>1619017099408</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1619017099408</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

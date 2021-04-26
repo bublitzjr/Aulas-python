@@ -1,5 +1,6 @@
 import datetime
 
+
 class Banco:
 
     def __init__(self):
@@ -11,7 +12,7 @@ class Banco:
     def validar_dados_do_cartao(self, modalidade_pagamento, detalhes_pagamento):
         with open("cartoes.txt", "r") as file:
             lines = file.readlines()
-
+        print(lines)
         verificacoes = []
         for linha in lines:
             linha = linha.split(";")
@@ -78,19 +79,14 @@ class Banco:
         return boleto
 
     def gerar_codigo_boleto(self, dados_requisicao: dict) -> str:
-        atual_instante = "123" # str(datetime.datetime.now())
+        atual_instante = str(datetime.datetime.now())
         for simbolo in ["-", ".", ":", " "]:
             atual_instante = atual_instante.replace(simbolo, "")
 
-        codigo = ""
-        codigo += str(self.codigo_banco)
+        codigo = str(self.codigo_banco)
         codigo += atual_instante
         codigo += str(dados_requisicao["valor"]).replace(".", "")
 
         return codigo
 
-
-# teste = Banco()
-# print(teste.gerar_boleto(dict(valor=10, data=10, codigo="1234", conta_loja="342")))
-# print(teste.efetuar_pagamento_com_cartao_credito(dict(numero="1734", senha="3322", valor=8000)))
 

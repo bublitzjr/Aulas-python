@@ -1,4 +1,5 @@
-from funcoes.banco import Banco
+from banco import Banco
+
 
 class Loja:
 
@@ -14,10 +15,9 @@ class Loja:
 
         if resultado:
             self.caixa += valor_compra
-            return "Compra efetuada com sucesso!"
+            print("Compra efetuada com sucesso!")
         else:
-            return "Compra efetuada com fracasso!"
-
+            print("Compra efetuada com fracasso!")
 
     def solicitar_boleto(self, dados_compra: dict):
         dados_requisicao = dict(conta_loja=self.conta_loja,
@@ -31,9 +31,10 @@ class Loja:
         if dinheiro >= valor_compra:
             troco = dinheiro - valor_compra
             self.caixa += valor_compra
-            return troco
+            print(f"Valeu! Seu troco é R${troco}")
         else:
-            return "Tente novamente mais tarde!"
+            print("Tente novamente mais tarde!")
 
-# teste = Loja()
-# teste.solicitar_boleto(dict(conta_loja="234", valor=10, data=1010))
+
+loja = Loja()
+loja.efetuar_pagamento_com_dinheiro(100, 80)
