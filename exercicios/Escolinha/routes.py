@@ -42,8 +42,9 @@ def responder_prova(codigo_prova=None):
     dict_values = json.loads(raw_request)
     dict_values['codigo_prova'] = codigo_prova
     
+    return Alunos().responder_prova(dict_values)        
     try:
-        return Alunos().responder_prova(dict_values)        
+        pass
     except Exception as error:
         return str(error)
 
