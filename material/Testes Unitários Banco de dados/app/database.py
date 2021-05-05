@@ -6,23 +6,8 @@ USER = "root"
 PASSWORD = ""
 PORT = 3306
 
+
 class DataBase:
-
-    def convert_dict_to_sql(self, table_to_update, data: dict) -> str:
-        sql = f"UPDATE {table_to_update} SET"
-        values = []
-
-        for key, value in data.items():
-            if not str(value)[0].isdigit():
-                values.append(f" {key} = '{value}' ")
-            else:
-                values.append(f" {key} = {value} ")
-        values_columns = ",".join(values)
-
-        sql += str(values_columns)
-        sql += f" WHERE id = {data['id']} "
-
-        return sql
 
     def create_connection_and_cursor(self, db_name: str = "") -> None:
         self.conn = MySQLdb.connect(host=HOST, user=USER, password=PASSWORD, port=PORT, db=db_name)
@@ -75,67 +60,3 @@ class DataBase:
             return False
 
         return False
-
-    def delete_data(self, table_to_delete: str, data: int) -> bool:
-        if not self.conn_and_cursor_exist():
-            raise Exception("Connetion or cursor is not defined!")
-        if not self.is_database_selected():
-            raise Exception("Database is not selected!")
-
-        sql = f"""DELETE FROM {table_to_delete} WHERE id = {data}"""
-
-        try:
-            affected_rows = self.cursor.execute(sql)
-            if affected_rows > 0:
-                return True
-        except:
-            return False
-
-        return False
-
-    def select_data(self, table_to_select: str, data: int) -> list:
-        if not self.conn_and_cursor_exist():
-            raise Exception("Connetion or cursor is not defined!")
-        if not self.is_database_selected():
-            raise Exception("Database is not selected!")
-
-        sql = f"""SELECT * FROM {table_to_select} WHERE id = {data}"""
-
-        try:
-            affected_rows = self.cursor.execute(sql)
-            if affected_rows > 0:
-                print(list(self.cursor.fetchall()))
-                return True
-        except:
-            return False
-
-        return False
-
-    def update_data(self, table_to_update: str, data: dict):
-        if not self.conn_and_cursor_exist():
-            raise Exception("Connetion or cursor is not defined!")
-        if not self.is_database_selected():
-            raise Exception("Database is not selected!")
-        if not isinstance(data, dict):
-            raise TypeError("Data is not a dict!")
-
-        sql = self.convert_dict_to_sql(table_to_update, data)
-
-        try:
-            affected_rows = self.cursor.execute(sql)
-            if affected_rows > 0:
-                return True
-        except:
-            return False
-
-        return False
-
-
-
-teste = DataBase()
-teste.create_connection_and_cursor("aula_bd")
-teste.conn_and_cursor_exist()
-teste.is_database_selected()
-# teste.insert_data("exemplotabela", ["jefferson", "323", 23, 2])
-teste.select_data("exemplotabela", 41)
-# teste.update_data("exemplotabela", dict(id=1, Nome="bla"))

@@ -1,5 +1,3 @@
-# python -m pytest --cov --cov-report=html
-
 from app.database import *
 from unittest import mock, TestCase
 import MySQLdb
@@ -83,118 +81,13 @@ class TestDataBase(TestCase):
 
         self.assertFalse(DataBase().insert_data("", []))
 
-    @mock.patch("app.database.DataBase.is_database_selected")
-    @mock.patch("app.database.DataBase.conn_and_cursor_exist")
-    def test_delete_data_works(self, mock_conn_and_cursor_exist, mock_is_database_selected):
-
-        mock_conn_and_cursor_exist.return_value = False
-        with self.assertRaises(Exception) as error:
-            DataBase().delete_data("", 0)
-
-        self.assertEqual("Connetion or cursor is not defined!", error.exception.args[0])
-
-        mock_conn_and_cursor_exist.return_value = True
-
-    # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
-        mock_is_database_selected.return_value = False
-        with self.assertRaises(Exception) as error:
-            DataBase().delete_data("", 0)
-
-        self.assertEqual("Database is not selected!", error.exception.args[0])
-
-        mock_is_database_selected.return_value = True
-
-    # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
-        with mock.patch("app.database.DataBase.cursor", create=True) as mock_cursor:
-            mock_cursor.execute.side_effect = [0, 1]
-            self.assertFalse(DataBase().delete_data("", 0))
-            self.assertTrue(DataBase().delete_data("", 0))
-
-        self.assertFalse(DataBase().delete_data("", 0))
-
-    @mock.patch("app.database.DataBase.is_database_selected")
-    @mock.patch("app.database.DataBase.conn_and_cursor_exist")
-    def test_update_data_works(self, mock_conn_and_cursor_exist, mock_is_database_selected):
-        mock_conn_and_cursor_exist.return_value = False
-        with self.assertRaises(Exception) as error:
-            DataBase().update_data("", dict(id=1, Nome="bla"))
-
-        self.assertEqual("Connetion or cursor is not defined!", error.exception.args[0])
-
-        mock_conn_and_cursor_exist.return_value = True
-
-        # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
-        mock_is_database_selected.return_value = False
-        with self.assertRaises(Exception) as error:
-            DataBase().update_data("", dict(id=1, Nome="bla"))
-
-        self.assertEqual("Database is not selected!", error.exception.args[0])
-
-        mock_is_database_selected.return_value = True
-
-        # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
-        with self.assertRaises(TypeError) as error:
-            DataBase().update_data("", "")
-
-        self.assertEqual("Data is not a dict!", error.exception.args[0])
-
-        mock_is_database_selected.return_value = True
-
-        # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
-        with mock.patch("app.database.DataBase.cursor", create=True) as mock_cursor:
-            mock_cursor.execute.side_effect = [0, 1]
-            self.assertEqual(DataBase().update_data("", dict(id=1, Nome="bla")), False)
-            self.assertEqual(DataBase().update_data("", dict(id=1, Nome="1")), True)
-
-        self.assertFalse(DataBase().update_data("", dict(id=1, Nome="1")))
-
-
-    @mock.patch("app.database.DataBase.is_database_selected")
-    @mock.patch("app.database.DataBase.conn_and_cursor_exist")
-    def test_select_data_works(self, mock_conn_and_cursor_exist, mock_is_database_selected):
-
-        mock_conn_and_cursor_exist.return_value = False
-        with self.assertRaises(Exception) as error:
-            DataBase().select_data("", 0)
-
-        self.assertEqual("Connetion or cursor is not defined!", error.exception.args[0])
-
-        mock_conn_and_cursor_exist.return_value = True
-
-        # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
-        mock_is_database_selected.return_value = False
-        with self.assertRaises(Exception) as error:
-            DataBase().select_data("", 0)
-
-        self.assertEqual("Database is not selected!", error.exception.args[0])
-
-        mock_is_database_selected.return_value = True
-
-        # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
-        with mock.patch("app.database.DataBase.cursor", create=True) as mock_cursor:
-            mock_cursor.execute.side_effect = [0, 1]
-            self.assertFalse(DataBase().select_data("exemplotabela", 41))
-            self.assertTrue(DataBase().select_data("exemplotabela", 1))
-
-        self.assertFalse(DataBase().select_data("", 0))
-
-    def test_convert_dict_sql_works(self):
-        result = DataBase().convert_dict_to_sql("exemplotabela", dict(id=1, Nome="Teste"))
-        self.assertEqual(result, "UPDATE exemplotabela SET id = 1 , Nome = 'Teste'  WHERE id = 1 ")
 
 
     # @classmethod
     # def setUpClass(cls) -> None:
     #     print("Inicio")
     #
-    # @classmethod,
+    # @classmethod
     # def tearDownClass(cls) -> None:
     #     print("final")
     #

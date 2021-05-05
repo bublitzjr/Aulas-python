@@ -1,0 +1,11 @@
+{
+  "Clonazepam": {
+    "quantidade": 1
+  },
+  "Paracetamol": {
+    "quantidade": 27
+  },
+  "Nimesulida": {
+    "quantidade": 9
+  }
+}

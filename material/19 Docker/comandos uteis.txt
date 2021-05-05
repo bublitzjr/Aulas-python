@@ -1,0 +1,2 @@
+# Cria um banco de dados
+docker container create -p 3306:3306 --net rede_um --network-alias master --name Mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -e MYSQL_DATABASE=score_db mysql:5.7

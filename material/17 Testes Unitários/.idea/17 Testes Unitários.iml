@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
 <<<<<<< HEAD
+    <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
 =======
-    <orderEntry type="jdk" jdkName="Python 3.9 (2)" jdkType="Python SDK" />
->>>>>>> 20e42ce30e2dbf28845e52984b65a19812d2c098
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$" />
+    </content>
+    <orderEntry type="jdk" jdkName="Python 3.8 (2)" jdkType="Python SDK" />
+>>>>>>> 0729844b5217b077cf0f7a143e035a62f2628508
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TestRunnerService">
