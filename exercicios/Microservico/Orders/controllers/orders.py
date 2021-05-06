@@ -1,4 +1,4 @@
-from DataBase import orders_bd
+from Orders.DataBase import orders_bd
 
 def listar_pedidos(dados):       
     try:

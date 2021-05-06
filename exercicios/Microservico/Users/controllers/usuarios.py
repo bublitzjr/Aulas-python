@@ -1,4 +1,4 @@
-from DataBase import usuarios_bd
+from Users.DataBase import usuarios_bd
 
 def listar_usuario(cpf):
     try:

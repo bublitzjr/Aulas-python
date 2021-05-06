@@ -1,5 +1,5 @@
 from .config_db import Conexao_bd as db
-from security.criptografia import *
+from Users.security.criptografia import *
 
 import datetime
 import pandas as pd
