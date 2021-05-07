@@ -39,10 +39,8 @@ def cadastrar(dados):
 
     return persistir_dados(sql) 
 
-def deletar(dados):    
-    cpf   = codificar_dado(dados['CPF'])
-
-    sql = f"DELETE FROM users WHERE CPF = '{cpf}'"
+def deletar(dados):
+    sql = f"DELETE FROM users WHERE CPF = '{codificar_dado(dados['CPF'])}'"
     return persistir_dados(sql)     
 
 def limpar():

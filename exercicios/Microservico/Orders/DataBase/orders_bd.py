@@ -7,9 +7,9 @@ import json
 
 def persistir_dados(sql):
     affected_rows = db.cursor.execute(sql)
-
+    print(affected_rows)
     if affected_rows > 0:
-        return dict(Status=200, Text="Ação realizada com sucesso")    
+        return dict(Status=200, Text="Ação realizada com sucesso")
     raise Exception("Não foi possível realizar a ação")        
 
 

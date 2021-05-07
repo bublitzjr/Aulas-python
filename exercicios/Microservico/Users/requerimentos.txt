@@ -1,0 +1,5 @@
+pandas
+flask
+mysql
+requests
+base64
