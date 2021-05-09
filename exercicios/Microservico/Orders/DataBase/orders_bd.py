@@ -1,9 +1,10 @@
 from .config_db import Conexao_bd as db
-from Orders.security.criptografia import *
+from security.criptografia import *
+from additionals.convert_to_json import convert_to_json
 
 import datetime
-import pandas as pd
 import json
+import pandas as pd
 
 def persistir_dados(sql):
     affected_rows = db.cursor.execute(sql)
@@ -23,10 +24,10 @@ def consultar(id):
 
     if affected_rows > 0:
         columns = [i[0] for i in db.cursor.description]  # Importando todos
-        df = pd.DataFrame(db.cursor.fetchall(), columns=columns)
-        json = df.to_json(orient="records")        
+        df = pd.DataFrame(db.cursor.fetchall(), columns=columns)                     
+        json = df.to_json(orient="records")                
 
-        return json
+        return json.replace("(", "").replace(")", "")
     else:
         raise Exception("Registro não existe")
 

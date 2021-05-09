@@ -10,7 +10,7 @@ def index():
 
 @app.route("/read/")
 def read():
-    return render_template("index.html", pessoa=pessoa)
+    return render_template("index.html", pessoa=dict(pessoa))
 
 if __name__ == "__main__":
     app.run(debug=True)

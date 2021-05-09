@@ -5,10 +5,15 @@ import json
 
 app = Flask(__name__)
 
+@app.route("/")
+def index():
+    return render_template("index.html")
+
 @app.route("/listar_pedidos", methods=['GET'])
 @app.route("/listar_pedidos/<int:id>", methods=['GET'])
 def listar_pedidos(id=None):    
-    return orders.listar_pedidos(id)
+    pedidos = eval(orders.listar_pedidos(id))
+    return render_template("listar_pedidos.html", pedidos=pedidos)
 
 @app.route("/deletar_pedidos", methods=['DELETE'])
 def limpar_pedidos():

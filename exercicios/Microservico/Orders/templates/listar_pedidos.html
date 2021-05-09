@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel='stylesheet' type='text/css' media='screen' href='static/css/style.css'>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <title>Listagem de pedidos</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Listagem de pedidos</h1>
+    <div>
+
+    <form>
+        <div class="container-fluid" id="corpo">            
+            <div class="row">
+                <div class="col-sm-2">id</div>
+                <div class="col-sm-2">id user</div>
+                <div class="col-sm-2">Descrição</div>
+                <div class="col-sm-2">Quantidade</div>
+                <div class="col-sm-2">Valor</div>
+                <div class="col-sm-2">Valor total</div>
+            </div>            
+
+            <div class="row" id="corpo">                        
+                {% for value in pedidos.values():%}                      
+                    <div class="col-sm-2" id="campo"><h5>{{value}}</h5></div>
+                {%endfor%}            
+            </div>
+        </div>        
+    </form>
+
+
+
+
+  
+</body>
+</html>

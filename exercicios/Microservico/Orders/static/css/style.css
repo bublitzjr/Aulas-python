@@ -1,0 +1,24 @@
+.header{
+    text-align: center;
+    padding: 2%;
+}
+
+#menu{
+    text-align: center;
+    background-color: lightskyblue;        
+}
+
+#opcao_menu:hover{
+    background-color: rgb(104, 192, 247);
+}
+
+#corpo{    
+    text-align: center;
+    padding: 0%;
+}
+
+#campo{
+    text-align: center;
+}
+
+
